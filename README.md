@@ -20,11 +20,13 @@ I created this site using semantic HTML, Tailwind CSS, and Vanilla JavaScript. T
 ## Colour Scheme
 These are the main colours I selected for the website design:
 
-| Name     | RGB            | HEX      |
-|----------|----------------|----------|
-| Black    | 0, 0, 0        | #000000  |
-| White    | 255, 255, 255  | #FFFFFF  |
-| [Color 1]| rrr, ggg, bbb  | #RRGGBB  |
-| [Color 2]| rrr, ggg, bbb  | #RRGGBB  |
-| [Color 3]| rrr, ggg, bbb  | #RRGGBB  |
-| [Color 4]| rrr, ggg, bbb  | #RRGGBB  |
+| Name       | RGB            | HEX        |
+|------------|----------------|------------|
+| Black      | 0, 0, 0        | #000000  | 
+| White      | 255, 255, 255  | #FFFFFF  |
+| Iron Gray  | 76, 87, 96     | #4c5760  |
+| Cool Steel | 147, 168, 172  | #93A8AC  |
+| Sand Dune  | 215, 206, 178  | #D7CEB2  |
+| Khaki Baige| 165, 158, 140  | #A59E8C  |
+| Dim Grey   | 102, 99, 91    | #66635B  | 
+
