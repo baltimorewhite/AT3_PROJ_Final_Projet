@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Dev Portfolio Final project</title>
 </head>
-<body class="font-nunito h-screen bg-black">
+<body class="font-nunito h-screen">
     <!-- into section -->
     <div
-      class="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 to-white dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
+      class="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden">
       <!-- navbar -->
       <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
         <div class="container mx-auto py-5 flex items-center justify-between">
@@ -22,10 +22,8 @@
               >NG Developer</span
             >
           </div>
-          <ul
-            class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
-          >
-            <li class="hover:text-gray-500">
+          <ul class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase">
+            <li class="hover:text-gray-600">
               <a href="#">home</a>
             </li>
             <li class="hover:text-gray-500">
@@ -47,15 +45,12 @@
             <div class="w-6 h-0.5 bg-black"></div>
             <div class="w-6 h-0.5 bg-black"></div>
           </div>
-          <ul
-            id="menu"
-            class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center"
-          >
+          <ul id="menu" class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
             <li>
-              <a id="hLink" href="#">home</a>
+              <a id="hLink" href="#">Home</a>
             </li>
             <li>
-              <a id="hLink" href="#about">about me</a>
+              <a id="hLink" href="#about">About me</a>
             </li>
             <li>
               <a id="hLink" href="#services">Resume</a>
@@ -64,10 +59,13 @@
               <a id="hLink" href="#works">Projects</a>
             </li>
             <li>
-              <a id="hLink" href="#contact">contact</a>
+              <a id="hLink" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
+
+        
       </nav>
+    <script src="/assets/index.js"></script>
 </body>
 </html>
