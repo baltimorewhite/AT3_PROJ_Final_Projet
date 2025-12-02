@@ -28,7 +28,7 @@ const form = document.querySelector("#contact form");
     const email = form.querySelector("input[type='email']").value;
     const message = form.querySelector("textarea").value;
 
-    if (name === "" || email === "" || message.length < 10) {
+    if (name === "" || email === "" || message.length < 30) {
       event.preventDefault();
       alert("Please complete each field or write a longer message.");
     }
