@@ -21,15 +21,44 @@ moon.addEventListener("click", ()=>{
 })
 
 
-const form = document.querySelector("#contact form");
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    form.addEventListener("submit", function(event) {
-    const name = form.querySelector("input[type='text']").value;
-    const email = form.querySelector("input[type='email']").value;
-    const message = form.querySelector("textarea").value;
+    // Clear previous errors
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('messageError').textContent = '';
 
-    if (name === "" || email === "" || message.length < 30) {
-      event.preventDefault();
-      alert("Please complete each field or write a longer message.");
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let message = document.getElementById('message').value.trim();
+
+    let isValid = true;
+
+    // Validate Name
+    if (name === '') {
+        document.getElementById('nameError').textContent = 'Name is required';
+        isValid = false;
     }
-  });
+
+    // Validate Email using Regex
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === '') {
+        document.getElementById('emailError').textContent = 'Email is required';
+        isValid = false;
+    } else if (!emailRegex.test(email)) {
+        document.getElementById('emailError').textContent = 'Valid email is required';
+        isValid = false;
+    }
+
+    // Validate Message
+    if (message === '') {
+        document.getElementById('messageError').textContent = 'Message cannot be empty';
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Form submitted successfully!');
+        
+    }
+});
