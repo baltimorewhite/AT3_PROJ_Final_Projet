@@ -61,4 +61,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('Form submitted successfully!');
         
     }
+    if (isValid) {
+    alert('Form submitted successfully!');
+    document.getElementById('contactForm').reset();
+  }
 });
