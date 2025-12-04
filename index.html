@@ -10,11 +10,9 @@
     <title>Dev Portfolio Final project</title>
 </head>
 <body class="font-nunito">
-  <main>
-       
-    <header>
-
+  <main>       
                                                 <!-- navbar -->
+    <header>
       <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
         <div class="container mx-auto py-5 flex items-center justify-between">
           <div class="flex items-center gap-2">
@@ -29,17 +27,17 @@
             <li class="hover:text-gray-500"><a href="#contact">Contact</a></li>
           </ul>
           <img id="moon" src="assets/img/moon.svg" class="hidden md:block w-8 cursor-pointer"alt="moonDarkMode"/>
-          <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
-            <div class="w-6 h-0.5 bg-black"></div>
-            <div class="w-6 h-0.5 bg-black"></div>
-            <div class="w-6 h-0.5 bg-black"></div>
-          </div>
-          <ul id="menu" class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center">
-            <li><a id="hLink" href="#">Home</a></li>
-            <li><a id="hLink" href="#about">About me</a></li>
-            <li><a id="hLink" href="#services">Resume</a></li>
-            <li><a id="hLink" href="#works">Projects</a></li>
-            <li><a id="hLink" href="#contact">Contact</a></li>
+          <button id="hamburger" class="relative w-6 h-6 flex flex-col justify-between items-center md:hidden z-20">
+            <span class="block w-10 h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
+            <span class="block w-8 h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
+            <span class="block w-10 h-0.5 bg-black transition-all duration-500 ease-in-out"></span>
+          </button>
+          <ul id="menu" class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center transition-all duration-500 ease-in-out transform opacity-0 -translate-y-10">
+            <li><a class="hLink" href="#">Home</a></li>
+            <li><a class="hLink" href="#about">About me</a></li>
+            <li><a class="hLink" href="#services">Resume</a></li>
+            <li><a class="hLink" href="#works">Projects</a></li>
+            <li><a class="hLink" href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -341,6 +339,6 @@
       <img src="assets/img/whatsapp.svg" alt="whatsapp">
     </a>
 
-    <script src="assets/index.js"></script>
+<script src="assets/index.js"></script>
 </body>
 </html>

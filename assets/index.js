@@ -1,24 +1,39 @@
-const hamburger = document.querySelector("#hamburger")
-const menu = document.querySelector("#menu")
-const moon = document.querySelector("#moon")
-const body = document.querySelector("body")
-const hLinks = document.querySelectorAll("#hLink")
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
 
-hamburger.addEventListener("click", ()=>{
-  menu.classList.toggle("hidden")
-  hamburger.classList.toggle("bg-white")
-})
+hamburger.addEventListener("click", () => {
+  const bars = hamburger.querySelectorAll("span");
 
-hLinks.forEach(link=>{
-  link.addEventListener("click", ()=>{
-    menu.classList.toggle("hidden")
-    hamburger.classList.toggle("bg-white")
-  })
-})
 
-moon.addEventListener("click", ()=>{
-  body.classList.toggle("dark")
-})
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden", "opacity-0", "-translate-y-10");
+    menu.classList.add("opacity-100", "translate-y-0");
+    hamburger.classList.toggle("bg-white");
+  } else {
+    menu.classList.remove("opacity-100", "translate-y-0");
+    menu.classList.add("opacity-0", "-translate-y-10");
+    hamburger.classList.toggle("bg-white");
+    setTimeout(() => menu.classList.add("hidden"), 500);
+  }
+
+  bars[0].classList.toggle("rotate-48");
+  bars[0].classList.toggle("translate-y-2");
+
+  bars[1].classList.toggle("opacity-0");
+
+  bars[2].classList.toggle("-rotate-48");
+  bars[2].classList.toggle("-translate-y-2");
+});
+
+const moon = document.getElementById("moon");
+const body = document.querySelector("body");
+
+moon.addEventListener("click", () => {
+  body.classList.toggle("dark");
+});
+
+
+
 
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
