@@ -22,46 +22,52 @@ moon.addEventListener("click", ()=>{
 
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Clear previous errors
-    document.getElementById('nameError').textContent = '';
-    document.getElementById('emailError').textContent = '';
-    document.getElementById('messageError').textContent = '';
+  // Clear previous errors
+  document.getElementById('nameError').textContent = '';
+  document.getElementById('emailError').textContent = '';
+  document.getElementById('messageError').textContent = '';
 
-    let name = document.getElementById('name').value.trim();
-    let email = document.getElementById('email').value.trim();
-    let message = document.getElementById('message').value.trim();
+  let name = document.getElementById('name').value.trim();
+  let email = document.getElementById('email').value.trim();
+  let message = document.getElementById('message').value.trim();
 
-    let isValid = true;
+  let isValid = true;
 
-    // Validate Name
-    if (name === '') {
-        document.getElementById('nameError').textContent = 'Name is required';
-        isValid = false;
-    }
+  // Regex rules
+  const nameRegex = /^[A-Za-zÀ-ÿ' -]{2,}$/; 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+  const messageRegex = /^[A-Za-z0-9À-ÿ.,!?'"()\-:; ]{15,}$/;
 
-    // Validate Email using Regex
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email === '') {
-        document.getElementById('emailError').textContent = 'Email is required';
-        isValid = false;
-    } else if (!emailRegex.test(email)) {
-        document.getElementById('emailError').textContent = 'Valid email is required';
-        isValid = false;
-    }
+  // Validate Name
+  if (name === '') {
+    document.getElementById('nameError').textContent = 'Name is required';
+    isValid = false;
+  } else if (!nameRegex.test(name)) {
+    document.getElementById('nameError').textContent = 'Valid name is required (only letters and basic characters)';
+    isValid = false;
+  }
 
-    // Validate Message
-    if (message === '') {
-        document.getElementById('messageError').textContent = 'Message cannot be empty';
-        isValid = false;
-    }
+  // Validate Email
+  if (email === '') {
+    document.getElementById('emailError').textContent = 'Email is required';
+    isValid = false;
+  } else if (!emailRegex.test(email)) {
+    document.getElementById('emailError').textContent = 'Valid email is required';
+    isValid = false;
+  }
 
-    if (isValid) {
-        alert('Form submitted successfully!');
-        
-    }
-    if (isValid) {
+  // Validate Message
+  if (message === '') {
+    document.getElementById('messageError').textContent = 'Message cannot be empty';
+    isValid = false;
+  } else if (!messageRegex.test(message)) {
+    document.getElementById('messageError').textContent = 'Message must be at least 15 characters and use valid characters';
+    isValid = false;
+  }
+
+  if (isValid) {
     alert('Form submitted successfully!');
     document.getElementById('contactForm').reset();
   }
