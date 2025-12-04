@@ -718,6 +718,10 @@ video {
   width: 2.5rem;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -1097,6 +1101,10 @@ video {
 @media (min-width: 480px) {
   .sm\:left-10 {
     left: 2.5rem;
+  }
+
+  .sm\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .sm\:p-0 {
