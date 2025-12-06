@@ -910,6 +910,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-indigo-200 {
+  --tw-gradient-from: #c7d2fe var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(199 210 254 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
